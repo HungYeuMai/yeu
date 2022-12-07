@@ -47,7 +47,7 @@ function show() {
     show1();
   } else {
     showPopup({
-      content: `Hãy đón chờ điều kỳ diệu vào ngày ${getToDay()} nhé!`,
+      content: `Hãy đón chờ điều kỳ diệu vào ngày 09/12 nhé!`,
       callback: hidePopup,
     });
   }
@@ -97,17 +97,21 @@ function show4() {
 }
 
 function show5() {
-  showPopup({
-    content: `
-              Em à, người yêu à, vợ yêu à.
-              Chúc mừng sinh nhật em nhé. 
-              Mong em tuổi mới ra trường thuận lợi.
-              Yêu anh nhiều nhiều 
-              và ...
-              Đừng láo nữa nhé
-              `,
-    callback: hidePopup,
-  });
+    let popupNode = document.getElementById("modal_popup");
+    let btnPopup = document.getElementById("btnNext");
+    popupNode.classList.remove("hidden");
+  
+    if (content) {
+      const contentNode = document.getElementById("content_text");
+      contentNode.innerText = content;
+    }
+  
+    if (callback && btnPopup) {
+      // btnPopup.onclick = function name() {
+      //   callback();
+      // };
+      nextFunc = callback;
+    }
 }
 
 setTimeout(() => {
