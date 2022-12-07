@@ -1,7 +1,7 @@
 const now = new Date();
 
-function nextFunc (){
-    alert(1);
+function nextFunc() {
+  alert(1);
 }
 
 function isDOB() {
@@ -97,21 +97,18 @@ function show4() {
 }
 
 function show5() {
-    let popupNode = document.getElementById("modal_popup");
-    let btnPopup = document.getElementById("btnNext");
-    popupNode.classList.remove("hidden");
+  let popupNode = document.getElementById("modal_popup");
+  let btnPopup = document.getElementById("btnNext");
+  popupNode.classList.remove("hidden");
+  const contentTextNode = document.getElementById("content_text");
+  contentTextNode.innerText = '';
   
-    if (content) {
-      const contentNode = document.getElementById("content_text");
-      contentNode.innerText = content;
-    }
-  
-    if (callback && btnPopup) {
-      // btnPopup.onclick = function name() {
-      //   callback();
-      // };
-      nextFunc = callback;
-    }
+  const imageNode = document.getElementById("mai_cuoi");
+  imageNode.classList.remove('hidden');
+
+  if (btnPopup) {
+    nextFunc = hidePopup;
+  }
 }
 
 setTimeout(() => {
