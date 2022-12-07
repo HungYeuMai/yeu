@@ -1,23 +1,33 @@
 const now = new Date();
 
+function nextFunc (){
+    alert(1);
+}
+
 function isDOB() {
   return now.getDay() == 9 && now.getMonth() == 11;
 }
 
 function showPopup({ title, content, callback }) {
-  const popupNode = document.getElementById("popup");
-  const btnPopup = document.getElementById("btnNext");
+  let popupNode = document.getElementById("modal_popup");
+  let btnPopup = document.getElementById("btnNext");
   popupNode.classList.remove("hidden");
 
   if (content) {
     const contentNode = document.getElementById("content_text");
     contentNode.innerText = content;
   }
-  if (callback && btnPopup) btnPopup.onclick = callback;
+
+  if (callback && btnPopup) {
+    // btnPopup.onclick = function name() {
+    //   callback();
+    // };
+    nextFunc = callback;
+  }
 }
 
 function hidePopup() {
-  const popupNode = document.getElementById("popup");
+  let popupNode = document.getElementById("modal_popup");
   popupNode.classList.add("hidden");
 }
 
@@ -38,7 +48,7 @@ function show() {
   } else {
     showPopup({
       content: `Hãy đón chờ điều kỳ diệu vào ngày ${getToDay()} nhé!`,
-      callback: hidePopup
+      callback: hidePopup,
     });
   }
 }
@@ -102,4 +112,4 @@ function show5() {
 
 setTimeout(() => {
   show();
-}, 3000 * 0);
+}, 3000);

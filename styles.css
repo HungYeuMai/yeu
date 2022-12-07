@@ -8,6 +8,17 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    /* background-color: rgba(24, 21, 21, 0.3); */
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+}
+
+#modal_popup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
     background-color: rgba(24, 21, 21, 0.3);
     height: 100vh;
     width: 100vw;
@@ -27,7 +38,7 @@
     background-color: red;
     height: 100vh;
     width: 100vw;
-    z-index: 1000;
+    /* z-index: 1000; */
     opacity: 5%;
 }
 
@@ -46,7 +57,6 @@
 .popup {
     height: 50vh;
     max-height: 400px;
-    background-color: red;
     width: 50vw;
     max-width: 500px;
     margin: 20vh auto;
@@ -54,7 +64,7 @@
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
-    z-index: 10000000;
+    background-color: white;
 }
 
 .wrap_title {
@@ -71,14 +81,14 @@
 
 .wrap_content {
     display: flex;
-    background-color: aqua;
+    /* background-color: aqua; */
     flex: 1;
     justify-content: center;
     margin-left: 0px 20px;
 }
 
 .wrap_footer {
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     justify-content: center;
     width: 100%;

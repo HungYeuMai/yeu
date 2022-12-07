@@ -14,8 +14,6 @@ function genRandomHeartSize() {
 function genPosition() {
   let top = screen.height * Math.random();
   let left = screen.width * Math.random();
-  if (top > screen.height) top = screen.height - 100;
-  if (left > screen.width) left = screen.width - 100;
   return { top, left };
 }
 
@@ -53,4 +51,4 @@ function genHeart() {
   const interval = setInterval(showHeart, 1000);
 }
 
-// genHeart();
+genHeart();
