@@ -1,7 +1,7 @@
 const now = new Date();
 
 function isDOB() {
-  return now.getDay() == 3 && now.getMonth() == 11;
+  return now.getDay() == 9 && now.getMonth() == 11;
 }
 
 function showPopup({ title, content, callback }) {
