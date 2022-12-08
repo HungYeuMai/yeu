@@ -5,7 +5,7 @@ function nextFunc() {
 }
 
 function isDOB() {
-  return now.getDay() == 9 && now.getMonth() == 11;
+  return now.getDate() == 9 && now.getMonth() == 11;
 }
 
 function showPopup({ title, content, callback }) {
@@ -32,7 +32,7 @@ function hidePopup() {
 }
 
 function getToDay() {
-  const day = lessThanTen(now.getDay());
+  const day = lessThanTen(now.getDate());
   const month = lessThanTen(now.getMonth() + 1);
   const year = lessThanTen(now.getFullYear());
   return `${day}/${month}/${year}`;
